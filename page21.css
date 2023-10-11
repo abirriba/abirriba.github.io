@@ -1,0 +1,23 @@
+
+main
+{
+	border: 5px solid darkcyan;
+	padding: 30px;
+	margin: auto;
+	width: 70%;
+	height: 9O0px;
+	border-radius: 8px;
+	background-color:plum;
+}
+.a{
+border: 5px solid white;
+border-radius: 8px;
+padding: 20px;
+
+}
+img{border: 5px solid darkcyan;
+right: 100px;
+width: 100px;
+
+
+}
