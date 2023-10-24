@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        table, th, td {background-color: cadetblue;
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body><center>
+    <table>
+        <tr>
+            <th>Article</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Résultat</th>
+        </tr>
+        <tr>
+            <td><label for="article1">Article 1</label></td>
+            <td><input type="number" id="prix1" placeholder="entre un article"></td>
+            <td><input type="number" id="quantite1"></td>
+            <td><input type="number" id="resultat1" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="article2">Article 2</label></td>
+            <td><input type="number" id="prix2" placeholder="entre un article"></td>
+            <td><input type="number" id="quantite2"></td>
+            <td><input type="number" id="resultat2" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="article3">Article 3</label></td>
+            <td><input type="number" id="prix3" placeholder="entre un article"></td>
+            <td><input type="number" id="quantite3"></td>
+            <td><input type="number" id="resultat3" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="article4"></label></td>
+            <td><button onclick="resetValues()">Reset</button></td>
+            <td><button onclick="calculateAllResults()">Calculate All</button></td>
+            <td><input type="number" id="resultat4" readonly></td>
+        </tr>
+    </table>
+</center>
+   
+
+    <script>
+        function calculateAllResults() {
+			document.getElementById(`resultat1`).value = document.getElementById("prix1").value * document.getElementById("quantite1").value;
+			document.getElementById(`resultat2`).value = document.getElementById("prix2").value * document.getElementById("quantite2").value;
+			document.getElementById(`resultat3`).value = document.getElementById("prix3").value * document.getElementById("quantite3").value;
+
+			document.getElementById(`resultat4`).value = document.getElementById(`resultat3`).value + document.getElementById(`resultat2`).value + document.getElementById(`resultat1`).value ;
+        }
+
+		function resetValues() {
+			document.getElementById(`resultat1`).value = "";
+			document.getElementById(`resultat2`).value = "";
+			document.getElementById(`resultat3`).value = "";
+			document.getElementById(`quantite1`).value = "";
+			document.getElementById(`quantite2`).value = "";
+			document.getElementById(`quantite3`).value = "";
+			document.getElementById(`resultat4`).value = "";
+		}
+    </script>
+</body>
+</html>
