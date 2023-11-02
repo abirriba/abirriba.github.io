@@ -1,0 +1,11 @@
+img {
+    width: 600px;
+    height: 500px;
+}
+
+img:hover {
+    border-color: black;
+    border-width: 5px;
+    border-style:groove;
+    /* display: block */
+}
