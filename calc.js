@@ -2,7 +2,8 @@ function addition() {
     let a = document.getElementById("t1").value;
     let b = document.getElementById("t2").value;
     let c = Number(a) + Number(b);
-    t3.value = c;
+    // t3.value = c;
+    document.getElementById("t3").value = c;
 
 }
 function soustraction() {
@@ -34,6 +35,7 @@ function permute() {
     t1.value = b;
     t2.value = a;
 }
+
 function parite() {
     let a = document.getElementById("t1").value;
     let b = document.getElementById("t2").value;
@@ -42,7 +44,8 @@ function parite() {
     let d = Number(c) % 2;
 
     if (d == 1)
-        t4.value = "Nombre IMPAIR";
+     document.getElementById("t4").value = "Nombre IMPAIR";
+        //  t4.value = "Nombre IMPAIR";
     else {
         t4.value = "NOMBRE PAIR";
     }
