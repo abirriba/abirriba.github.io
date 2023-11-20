@@ -1,0 +1,60 @@
+html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function ajouterLigne() {
+            var nom = document.getElementById("t1").value;
+            var age = document.getElementById("t2").value;
+
+            if (nom === '' || age === '') {
+                alert("Un ou plusieurs champs sont vides.");
+            } else if (isNaN(age) || (Number(age) < 10) || (Number(age) > 20)) {
+                alert("L'âge saisi est invalide.");
+            } else {
+                var table = document.getElementById("aptable");
+                var newRow = table.insertRow(1);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+
+                cell1.innerHTML = nom;
+                cell2.innerHTML = age;
+            }
+        }
+        // 16 jbt tableau bl id o ndit nzid fih ligne o cellul
+        // lprompt katkhrj string dakchi bach drna number
+        // incertrow katzid ligne;incertcell katzid cellul
+        // innerHTML b7al value
+    </script>
+</head>
+
+<body>
+    <form> 
+        <label for="t1">Nom:</label>
+        <input type="text" id="t1" name="nom">
+
+        <br>
+
+        <label for="t2">Age:</label>
+        <input type="text" id="t2" name="age">
+
+        <br>
+
+        <button type="button" onclick="ajouterLigne()">Ajouter une ligne</button>
+    </form>
+
+    <table id="aptable" bgcolor="pink" border="1" width="500">
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
